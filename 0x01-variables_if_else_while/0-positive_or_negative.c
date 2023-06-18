@@ -2,7 +2,7 @@
 /**
  * main - generate random numbers to delete -ve or +ve
  *
- * Return: Always (0)
+ * Return: always (0)
  *
  */
 int main(void)
