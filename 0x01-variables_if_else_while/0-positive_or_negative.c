@@ -1,9 +1,11 @@
+#include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
+
 /**
- * main - generate random numbers to delete -ve or +ve
+ * main - Determines if a number is positive, negative or zero.
  *
- * Return: always (0)
- *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
