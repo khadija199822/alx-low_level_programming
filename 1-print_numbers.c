@@ -1,29 +1,22 @@
-#include "variadic_functions.h"
+#include "lists.h"
 #include <stdio.h>
-#include <stdarg.h>
 
 /**
- * print_numbers - Prints numbers, followed by a new line.
- * @separator: The string to be printed between numbers.
- * @n: The number of integers passed to the function.
- * @...: A variable number of numbers to be printed.
+ * print_listint - Prints all the elements of a listint_t list.
+ * @h: A pointer to the head of the list_t list.
+ *
+ * Return: The number of nodes in the list_t list.
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+size_t print_listint(const listint_t *h)
 {
-	va_list nums;
-	unsigned int index;
+	size_t nodes = 0;
 
-	va_start(nums, n);
-
-	for (index = 0; index < n; index++)
+	while (h)
 	{
-		printf("%d", va_arg(nums, int));
-
-		if (index != (n - 1) && separator != NULL)
-			printf("%s", separator);
+		nodes++;
+		printf("%d\n", h->n);
+		h = h->next;
 	}
 
-	printf("\n");
-
-	va_end(nums);
+	return (nodes);
 }
